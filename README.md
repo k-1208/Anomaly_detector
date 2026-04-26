@@ -7,6 +7,10 @@ An end-to-end anomaly detection pipeline for infrastructure-style resource metri
 ## To access the detailed docs, please refer the link below:
 https://docs.google.com/document/d/1c3lNWLp6OgEyOW0SWC681Xy5AnupRdhokZJy82EwOAs/edit?usp=sharing
 
+## Things that could be added next:
+- Added time series support for tracking resource metrics and anomalies over time.
+- Implemented a more sophisticated ML model for anomaly scoring.
+
 The pipeline:
 1. Ingests payload data (or collects live local system/process metrics).
 2. Scores each resource using a hybrid approach (rule engine + ML scorer).
@@ -65,20 +69,6 @@ What this does by default:
 - Optionally calls Gemini (if key is configured)
 - Writes output to `pipeline_output.json`
 
-## Troubleshooting
-
-- `ModuleNotFoundError: No module named 'psutil'`:
-  - Install dependencies in the active virtual environment:
-    - `pip install psutil google-generativeai pandas`
-
-- `ValueError: Gemini API key is required...`:
-  - Set `GEMINI_API_KEY` before running, or run without LLM enrichment.
-
-- `python: command not found`:
-  - Use `python3` on Linux/macOS.
-
-- Virtual environment not activating:
-  - Ensure you are in project root and shell execution policy permits activation (Windows PowerShell).
 
 ## Expected Output
 
