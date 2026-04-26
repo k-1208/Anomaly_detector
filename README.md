@@ -2,6 +2,8 @@
 
 An end-to-end anomaly detection pipeline for infrastructure-style resource metrics.
 
+![alt text](image.png)
+
 The pipeline:
 1. Ingests payload data (or collects live local system/process metrics).
 2. Scores each resource using a hybrid approach (rule engine + ML scorer).
