@@ -12,7 +12,7 @@ https://docs.google.com/document/d/1c3lNWLp6OgEyOW0SWC681Xy5AnupRdhokZJy82EwOAs/
 - Implemented a more sophisticated ML model for anomaly scoring.
 - could have fine tuned model to identify anomalies specific to certain resource types or environments. (Will need a lot of data for that and through that later we will be able to capture niche anomalies that are specific to certain resource types or environments as well.)
 
-The pipeline:
+### The pipeline:
 1. Ingests payload data (or collects live local system/process metrics).
 2. Scores each resource using a hybrid approach (rule engine + ML scorer).
 3. Optionally enriches actionable anomalies with Gemini LLM explanations.
